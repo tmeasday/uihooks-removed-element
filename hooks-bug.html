@@ -1,0 +1,22 @@
+<head>
+  <title>hooks-bug</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+<!-- XXX: whitespace is important, thus weird formatting-->
+<div id="hooks">
+  {{#if A}}
+    <div id="A">A</div>
+  {{else}}
+    <div id="B">B</div>
+  {{/if}}{{#if C}}<div id="C">C</div>{{/if}}<div id="D">D</div>
+</div>
+  
+  <button>CLICK ME</button>
+</template>
